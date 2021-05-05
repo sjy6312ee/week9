@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NATALIE's ORANGE JUICE</title>
+	<style type="text/css">
+		<meta charset="utf-8">
+		body, h2,section, img, h1, p{margin: 0; overflow: hidden;}
+		body{margin: 0; background: url(back2.jpg);
+				background-size: 100% auto;
+				background-attachment: fixed;
+				background-repeat: repeat;}
+		@font-face{font-family: "GrandSlang-Italic";
+					src:local(※), url(GrandSlang-Italic.otf)format("opentype"),
+						url('GrandSlang-Italic.woff') format('woff');}
+		@font-face{font-family: "Jepisode2";
+					src:local(※), url(Jepisode2.otf)format("opentype");}
+			@font-face{font-family: "SDGNr";
+					src:local(※), url(SDGNr.ttf)format("truetype");}
+		header{font-family: GrandSlang-Italic;
+				font-size: 115px;
+				color: #FF7F29;
+				display: flex;
+				height: 800px;
+				justify-content: center;
+				overflow: hidden;}
+		nav{background:white;width: 100%;
+			height: 40px;
+			position: sticky; top: 0;
+			z-index: 100;
+			float: left;}
+		nav ul{margin: auto;}
+		nav ul li{list-style-type: none; width:200px; height: 30px;
+			float: left;
+			text-align: center;
+			line-height: 50px;}
+		nav ul li a{display: block; color: #ED7524;
+					font-family: GrandSlang-Italic; font-size: 20px;
+					text-decoration: none; text-align: center;
+					width: 400px;}
+		nav ul li a:hover{color: #455C2A; transition: all 0.3s;}
+		html{scroll-behavior: smooth;}
+		h1{font-family: Jepisode2;
+			font-size: 3em;
+			color: #ED7524;
+			word-break: keep-all;
+			overflow: hidden;}
+		section{overflow: hidden;
+				background: #DDD7CB;
+				margin-top:300px;}
+		p{font-family: GrandSlang-Italic;
+			font-size: 11.7em;
+			word-break: keep-all;
+			color: #FF7F29;
+			overflow: hidden;}
+		footer{font-family: SDGNr;
+				font-size: 1em;
+				color: #FF7F29;
+				overflow: hidden;
+				margin-bottom: 50px;}
+		.bg-beige{background: #DDD7CB; width: 1920px; padding-top: 800px;}
+		.bg-none{ width: 1920px; padding-top:50px;}
+		.back2{background: url(back2.jpg);
+				background-size: 100% auto;
+				background-attachment: fixed;}
+		.row{width: 1920px; margin: auto; position: relative;}
+		.row1{width: 1920px; margin: auto; position: relative; display: flex; justify-content: center;}
+		.row2{margin: auto; position: relative; display: flex;}
+		.margin0{ width: 1920px; margin-top: 0px;padding-top:0px;
+				padding-bottom: 500px;}
+		.margin00{ width: 1920px; margin-top: 0px;padding-top:0px;
+				padding-bottom: 0px;}
+		.padding0{background: #DDD7CB; width: 1920px; margin-top: 0px;padding-top:0px;
+				padding-bottom: 10px;}	
+		.padding0-2{background: #DDD7CB; width: 1920px; margin-top: 0px;padding-top:0px;
+				padding-bottom: 400px;}	
+		.paddingtop{padding-top: 20px;}
+		.footer{font-family: SDGNr; font-size: 1em;color: #FF7F29; text-align: center; padding-top:150px;}
+		.reserved{width: 1920px; margin-top: 0px;padding-top:0px;
+				padding-bottom: 400px;}	
+		.relative{position: relative;}
+		.absolute{display: block;position: absolute;}
+
+		.col1{width: calc(100%/8*1-10px); background: none; margin: 0px 5px;}
+
+		.pic1{left: 200px; width:550px; top:100px; background: url(pic1.png); transition: all 0.2s;}
+		.pic1:hover{left: 200px; width:550px; top:100px; background: url(pic1h.png);}
+		.text1{left: 800px; width: 550px; top:170px;}
+
+		.point1{left: 450px; width:60px; top:120px;}
+		.ani1{left: 650px; width:200px; top:270px; animation: rotate 10s infinite linear}
+		.pic2{left: 550px; width:400px; top:80px;}
+		.text2{left: 1000px; width: 320px; top:280px;}
+		.pic3{left: 0px; width:1600px; top:820px; }
+		.icon1{left: 400px; width: 800px; top:880px;}
+		.text3{left: 200px; width:800px; top:760px;}
+		.text4{left: 520px; width: 800px; top:1110px;}
+
+		.point2{left: 1100px; width:110px; top:520px;}
+		.pic4{left: 630px; width:680px; top:90px;}
+		.ani2{left: 780px; width:170px; top:290px; animation: fadeIn 1s 1s infinite linear alternate;}
+		.text5{left: 250px; width: 320px; top:290px;}
+		.pic5{left: 200px; width:1120px; top:790px;}
+		.text6{left: 300px; width: 280px; top:930px;}
+
+		.point3{left: 310px; width:110px; top:110px;}
+		.ani3{left: 680px; width:200px; top:250px; animation: jump 3s forwards infinite linear;}
+		.pic6{left: 435px; width:360px; top:60px;}
+		.text7{left: 920px; width: 320px; top:240px;}
+		.pic7{left: 200px; width:1120px; top:760px;}
+
+		.place1{left: 0px; width:1400px; top:100px; animation: fadeIn 1s 8s infinite linear alternate;}
+		.p1{left: 150px; width:1400px; top:00px;}
+		.p2{left: 400px; width:1400px; top:280px;}
+
+		.point4{left: 1130px; width:110px; top:100px;}
+		.pic8{left: 580px; width:540px; top:170px; z-index: 40}
+		.ani4{left: 770px; width:400px; top:300px; animation: goback 3s infinite cubic-bezier(.72,.3,.32,.79) ; z-index: 46}
+		.text8{left: 200px; width: 320px; top:230px;}
+		.pic9{left: 00px; width:1600px; top:800px;}
+		.text9{left: 200px; width: 320px; top:920px;}
+
+		.point5{left: 200px; width:110px; top:300px;}
+		.pic10{left: 360px; width:540px; top:100px; z-index: 30}
+		.ani5{left: 390px; width:480px; top:320px; animation: fadeIn 2s 10s infinite linear alternate; z-index: 35}
+		.text10{left: 950px; width: 320px; top:230px;}
+		.place2{left: -100px; width:1800px; top:740px;}
+
+		.footerimg{left: 50px; width:300%; animation: moving 30s infinite linear;}
+
+		a
+		a:hover{transition: all 0.3s;}
+
+		@keyframes moving{
+			0%{transform: translateX(0);}
+			100%{transform: translateX(calc(-200px*10));}
+		}
+
+		@keyframes rotate{
+			0%{transform:rotate(0deg);}
+			100%{transform:rotate(360deg);}
+		}
+
+		@keyframes fadeIn{
+			0%{opacity:0;}
+			100%{opacity:1;}
+		}
+
+		@keyframes jump{
+			0%{} 100%{transform: rotate3d(0,1,0,360deg);}
+		}
+
+		@keyframes goback{
+			from{top: -4%}
+
+		}
+
+	</style>
+</head>
+<body>
+	<header><center>
+		<div class="row">
+		<img src="brandlogo.svg" width="230" height="70"><br><br>
+		Juice Honestly Juiced!</center>
+		<div class="row">
+	</header>
+	<nav>
+		<div class="row">
+			<ul class="row">
+				<li><a href="#a">About</li>
+				<li><a href="#b">Content</li>
+				<li><a href="#c">More</li>
+				<li><a href="#d">Process</li>
+				<li><a href="#e">Tip</li>
+				<li><a href="#f">Recipe</li></a>
+			</ul>
+		</div>
+	</nav>
+	
+	<section class="margin00" id="a">
+		<div class="row1 bg-beige col1">
+			<img src="pic1.png" class="absolute pic1">
+			<img src="text1.svg" class="absolute text1">
+		</div>
+	</section>
+	<section class="margin0" id="b">
+		<div class="row1 bg-beige">
+			<div>
+				<img src="point1.svg" class="absolute point1">
+				<img src="pic2.png" class="absolute pic2">
+				<img src="ani1.svg" class="absolute ani1">
+				<img src="text2.svg" class="absolute text2">
+				<img src="pic3.png" class="absolute pic3">
+				<img src="icon1.svg" class="absolute icon1">
+				<img src="text3.svg" class="absolute text3">
+				<img src="text4.svg" class="absolute text4">
+			</div>
+		</div>
+	</section>
+	<section class="margin0" id="c">
+		<div class="row1 bg-beige">
+			<div>
+				<img src="point2.svg" class="absolute point2">
+				<img src="pic4.png" class="absolute pic4">
+				<img src="ani2.svg" class="absolute ani2">
+				<img src="text5.svg" class="absolute text5">
+				<img src="pic5.png" class="absolute pic5">
+				<img src="text6.svg" class="absolute text6">
+			</div>
+		</div>
+	</section>
+	<section class="margin0" id="d">
+		<div class="row1 bg-beige">
+			<div>
+				<img src="point3.svg" class="absolute point3">
+				<img src="pic6.png" class="absolute pic6">
+				<img src="ani3.svg" class="absolute ani3">
+				<img src="text7.svg" class="absolute text7">
+				<img src="pic7.png" class="absolute pic7">
+			</div>
+		</div>
+	</section>
+	<section class="padding0">
+		<div class="row1 bg-beige">
+		<img src="place1.png" class="absolute place1">
+		<p class="absolute p1">Because</p>
+		<p class="absolute p2">it's Natalie's</p></center>
+	</section>
+	<section class="margin0" id="e">
+		<div class="row1 bg-beige">
+			<div>
+				<img src="point4.svg" class="absolute point4">
+				<img src="ani4.svg" class="absolute ani4">
+				<img src="pic8.png" class="absolute pic8">
+				<img src="text8.svg" class="absolute text8">
+				<img src="pic9.png" class="absolute pic9">
+				<img src="text9.svg" class="absolute text9">
+			</div>
+		</div>
+	</section>
+		<section class="padding0-2" id="f">
+		<div class="row1 bg-beige">
+			<div>
+				<img src="point5.svg" class="absolute point5">
+				<img src="ani5.svg" class="absolute ani5">
+				<img src="pic10.png" class="absolute pic10">
+				<img src="text10.svg" class="absolute text10">
+				<img src="place2.png" class="absolute place2">
+			</div>
+		</div>
+	</section>
+	<footer>
+		<img src="realfooter.svg" class="paddingtop absolute footerimg">
+		<div class="footer">
+			©2021. MOOM KYEONGSEO. all rights reserved.
+			<br>sjy6312ee@gmail.com
+			<br>
+			<br>
+		</div>
+	</footer>
+</body>
+</html>
